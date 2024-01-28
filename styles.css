@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "poppins",sans-serif;
+}
+body{
+    color: #ededed;
+    background: #032b47;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 5%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    z-index: 100;
+    justify-content: space-between;
+    background-color: #070008;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    color: rgb(249, 250, 250);
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.1s;
+    
+}
+.logo span{
+    color: aqua;
+}
+.header .navbar{
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+.header .navbar a{
+    font-size: 1.5rem;
+    font-weight:600;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    color: #ededed;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.1s;
+}
+.header .navbar a:hover{
+    color: aqua;
+}
+.header #toggler{
+    display: none;
+}
+.header .fa-bars{
+    font-size: 3rem;
+    color: aqua;
+    border-radius: 0.5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+.home .container{
+    position: relative;
+    height: 100vh;
+    background: url(./assets/bg1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: right;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+.home .container-box{
+    width: 50%;
+    padding: 0;
+    /* line-height: 1.5; */
+    color: aqua;
+}
+.home .container .container-box .heading{
+    font-size: 4rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.1s;
+}
+.home .container .container-box h3{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    transition: 0.3s;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.4s;
+}
+.home .container .container-box p{
+    padding: 1rem 0;
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0;
+    transition: 1s;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.3s;
+}
+.btn-box{
+    display: inline-block;
+    background: #0ef;
+    margin-top: 1rem;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,0 0 25px #0ef;
+}
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,
+      0 0 200px cyan;
+}
+.image-container{
+    width: 50%;
+    height: 500px;
+    margin-right:3rem;
+    /* padding: 1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+    border-radius: 20px;
+    
+}
+.image-container #image{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #0ef;
+    border-radius: 20px;
+}
+
+
+
+@media(min-width: 318px) and (max-width: 767px){
+    .home .container{
+        display: block;
+    }
+    .home .container .image-container{
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 5rem;
+        height: 50%;
+        margin-bottom: 2rem;
+
+    }
+    .home .container .container-box{
+        margin-left: 15%;
+        width: 70%;
+    }
+    .header .fa-bars{
+        display: block;
+        background: #67c4f2;
+        color: #3c3535;
+        padding: 1rem 1.5rem;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: .1rem solid rgba(0,0,0,.1);
+
+    }
+    .header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+    .header .navbar a{
+        background: #180038;
+        color: #fff;
+        width: 100%;
+        display: block;
+        font-size: 1rem;
+        border-bottom: #dcd0d0 solid;
+        
+    }
+    .home .container .container-box .heading{
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    .home .container .container-box h3{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .home .container .container-box p{
+        padding: 1rem 0;
+        font-size: 10px;
+    }
+    .btn-box{
+        display: inline-block;
+        background: #0ef;
+        padding: 8px 15px;
+        border-radius: 40px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+@media (min-width: 768px) and (max-width: 1056px) {
+    .header{
+        padding: .5rem 2%;
+        background: #000;
+    }
+    .logo{
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: .5rem .5rem;
+
+    }
+    .header .navbar a{
+        font-size: 1rem;
+        font-weight:600;
+        padding: .5rem .5rem;
+    }
+    .home .container .container-box .heading{
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    .home .container .container-box h3{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .home .container .container-box p{
+        padding: 1rem 0;
+        font-size: 15px;
+    }
+    .btn-box{
+        display: inline-block;
+        background: #0ef;
+        padding: 8px 15px;
+        border-radius: 40px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
