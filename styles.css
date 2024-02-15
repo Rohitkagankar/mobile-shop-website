@@ -8,7 +8,7 @@
 body{
     min-height: 100vh;
     color: rgb(5, 5, 5);
-    background: rgb(247, 249, 248);
+    background: rgb(175, 176, 176);
 }
 .header{
     position: fixed;
@@ -281,26 +281,22 @@ body{
 .products .container .container-box{
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
-    padding: 7rem;
+    gap: 1rem;
+    padding: 0rem;
 }
 .products .container .container-box .box{
-    flex: 1 1 300px;
-    box-shadow: 0 0.5rem 1.5rem rgb(6, 219, 223);
+    flex: 1 1 200px;
     border-radius: 0.5rem;
-    border: .1rem solid rgba(207, 238, 6, 0.1);
     position: relative;
     /* height: 300px; */
 }
 
 .products .container .container-box .box .discount{
-    position: absolute;
-    top: .5rem;
-    left: .5rem;
-    padding: .2rem .4rem;
-    font-size: 2rem;
-    color: #e907f1f3;
-    background: rgb(248, 201, 247);
+    padding: .1rem .2rem;
+    height: 22px;
+    font-size: .9rem;
+    color: white;
+    background: green;
     z-index: 1;
     border-radius: .5rem;
 }
@@ -312,13 +308,11 @@ body{
 
 }
 .products .container .container-box .box .image img{
-    width: 100%;
-    height: 100%;
+    width: 130px;
+    height: 160px;
 
 }
-.products .container .container-box .box:hover .image img{
-    transform: scale(1.1);
-}
+
 .products .container-box .box .image .icons{
     position: absolute;
     bottom: -7rem;
@@ -330,9 +324,9 @@ body{
     bottom: 0;
 }
 .products .container-box .box .image .icons a{
-    height: 3rem;
-    line-height: 3rem;
-    font-size: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
     width: 50%;
     background: rgb(229, 5, 143);
     color: #fff;
@@ -348,23 +342,37 @@ body{
     width: 100%;
     /* text-decoration: none; */
 }
-.products .container-box .box .content{
-    padding: 1rem;
-    text-align: center;
+.products .container-box .box .content .con{
+    display: inline-flex;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
 }
-.products .container-box .box .content h3{
-    font-size: 2rem;
-    color: #f1eeee ;
+.products .container-box .box .content .con p{
+    font-size: .9rem;
+    font-weight: 400;
+    color: #999;
+    margin: 0;
+    padding: 0;
+}
+.products .container-box .box .content p{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px;
+}
+.products .container-box .box .content{
+    padding: 0;
+    text-align: center;
+    margin: 0;
 }
 .products .container-box .box .content .price{
-    font-size: 1.5rem;
-    color: rgb(243, 8, 172);
+    font-size: 1rem;
+    color: rgb(15, 15, 15);
     font-weight: bolder;
-    padding-top: 0.5rem;
 
 }
 .products .container-box .box .content .price span{
-    font-size: 1rem;
+    font-size: .8rem;
     color: #999;
     font-weight: lighter;
     text-decoration: line-through;
